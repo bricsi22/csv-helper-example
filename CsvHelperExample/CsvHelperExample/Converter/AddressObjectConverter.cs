@@ -15,7 +15,7 @@ namespace CsvHelperExample.Converter
 
     public override string ConvertToString(object value, IWriterRow row, MemberMapData memberMapData)
     {
-      if (value is AddressObject)
+      if (value != null && value is AddressObject)
       {
         var addressObject = value as AddressObject;
         return $"{addressObject.City} {addressObject.Road} {addressObject.RoadNumber}";
