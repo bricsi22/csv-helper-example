@@ -10,6 +10,7 @@ namespace CsvHelperExample.Converter
     public override object ConvertFromString(string text, IReaderRow row, MemberMapData memberMapData)
     {
       var emptyObj = new AddressObject();
+      // if you are reading back the CSV then additional code should be needed here
       return emptyObj;
     }
 
