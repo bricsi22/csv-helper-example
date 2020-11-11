@@ -55,6 +55,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converter\AddressObjectConverter.cs" />
+    <Compile Include="Mapping\LocationRowMap.cs" />
     <Compile Include="Model\AddressObject.cs" />
     <Compile Include="Model\LocationRow.cs" />
     <Compile Include="Program.cs" />
@@ -64,8 +66,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Mapping\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

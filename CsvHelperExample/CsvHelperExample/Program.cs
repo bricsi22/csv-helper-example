@@ -2,6 +2,7 @@
 
 using CsvHelper;
 using CsvHelper.Configuration;
+using CsvHelperExample.Mapping;
 using CsvHelperExample.Model;
 using System;
 using System.Collections.Generic;
@@ -58,6 +59,7 @@ namespace CsvHelperExample
 
       using (var writer = new StreamWriter(@"D:\temp\NullValuesTest.csv")) {
         var csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture);
+        csvConfig.RegisterClassMap<LocationRowMap>();
         using (var csv = new CsvWriter(writer, csvConfig))
         {
           csv.WriteRecords(locationRowList);
